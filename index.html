@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- รองรับมือถือ / iPad -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         หน้าแรก : จอเสีย
+    ========================== -->
+    <section id="errorScreen">
+
+        <div class="scanlines"></div>
+        <div class="noise"></div>
+
+        <div class="error-box">
+
+            <p class="system-text">
+                SYSTEM DIAGNOSTIC
+            </p>
+
+            <h1 id="errorTitle">
+                SYSTEM ERROR
+            </h1>
+
+            <p id="errorMessage">
+                Something went wrong...
+            </p>
+
+            <!-- Progress -->
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="hint">
+                CLICK TO REPAIR
+            </p>
+
+            <button id="repairButton">
+                REPAIR SYSTEM
+            </button>
+
+            <p id="attempt">
+                Attempts: 0 / 6
+            </p>
+
+        </div>
+
+        <div class="error-code">
+            ERROR_404
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         หน้า Anniversary
+    ========================== -->
+    <main >
+
+        <!-- HERO -->
+        <section class="hero page active">
+
+            <p class="small-title">
+                SYSTEM RESTORED
+            </p>
+
+            <h2>
+                Happy 9-Month Anniversary ❤️
+            </h2>
+
+            <p class="name">
+                To Biw
+            </p>
+
+            <button id="musicButton">
+                ♫ Play Our Song
+            </button>
+
+        </section>
+
+
+        <!-- LETTER -->
+        <section id="letterReveal" class="section letter-section page hidden">
+
+            <button id="letterTrigger" class="letter-trigger" type="button">
+                <span class="envelope-flap"></span>
+                <span class="envelope-heart">♥</span>
+                <span class="envelope-text">Open my letter</span>
+            </button>
+
+            <div id="passwordPanel" class="password-panel hidden">
+
+                <p class="password-title">
+                    ENTER THE SECRET CODE
+                </p>
+
+                <p class="password-hint">
+                    ใบ้: วันที่เยลเกิด
+                </p>
+
+                <output id="passwordDisplay" class="password-display" aria-live="polite">
+                    ------
+                </output>
+
+                <p id="passwordError" class="password-error" aria-live="polite"></p>
+
+                <div id="keypad" class="keypad">
+
+                    <button type="button" data-digit="1">1</button>
+                    <button type="button" data-digit="2">2</button>
+                    <button type="button" data-digit="3">3</button>
+                    <button type="button" data-digit="4">4</button>
+                    <button type="button" data-digit="5">5</button>
+                    <button type="button" data-digit="6">6</button>
+                    <button type="button" data-digit="7">7</button>
+                    <button type="button" data-digit="8">8</button>
+                    <button type="button" data-digit="9">9</button>
+                    <button type="button" data-digit="0">0</button>
+
+                </div>
+
+            </div>
+
+            <div id="letterContent" class="letter-content hidden">
+
+                <p class="label">
+                    A LITTLE LETTER
+                </p>
+
+                <div class="letter">
+
+                    <p>
+                        บิวอ่านนนนนนน,
+                    </p>
+
+                    <p>
+                        สวัสดีวันครบรอบ 9 เดือนนะจ๊ะ รักเธอนะ
+                        ขอบคุณที่ยังทนอยู่ด้วยกันจ้าาา
+                        ถึงเค้าจะขี้วีน เอาแต่ใจไปหน่อย แต่ก็ไม่ได้ตั้งใจปะ
+                        คืออารมณ์มันขึ้นๆ ลงๆ ตามสถานการณ์อะเนาะ
+                    </p>
+
+                    <p>
+                        แป๊ปเดียว ผ่านมา 9 เดือนแล้ว     
+                        รู้สึกเหมือนเพิ่งเจอกันเมื่อวานเอง 5555568545545
+                    </p>
+
+                    <p class="signature">
+                        Happy Nine-Month Anniversary ❤️
+                    </p>
+
+                </div>
+
+                <button id="continueButton" class="continue-button" type="button">
+                    Continue
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- รูป -->
+        <section id="memoriesSection" class="section page">
+
+            <p class="label">
+                OUR MEMORIES
+            </p>
+
+            <h3>
+                Moments I never want to forget.
+            </h3>
+
+            <div class="photos">
+
+                <div class="photo">
+                    <img src="assets/photo1.jpg" alt="Memory 1">
+                </div>
+
+                <div class="photo">
+                    <img src="assets/photo2.jpg" alt="Memory 2">
+                </div>
+
+                <div class="photo">
+                    <img src="assets/photo3.jpg" alt="Memory 3">
+                </div>
+
+                <div class="photo">
+                    <img src="assets/photo4.jpg" alt="Memory 4">
+                </div>
+
+            </div>
+
+            <button id="memoriesNextButton" class="continue-button" type="button">
+                Continue
+            </button>
+
+        </section>
+
+
+        <!-- VIDEO -->
+        <section id="videoSection" class="section hidden">
+
+            <p class="label">
+                OUR MOMENT
+            </p>
+
+            <h3>
+                Press Play.
+            </h3>
+
+            <div class="video-box">
+
+                <video controls playsinline muted>
+
+                    <source
+                        src="assets/video.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support video.
+
+                </video>
+
+            </div>
+
+            <p id="videoEndMessage" class="video-end-message hidden">
+                ขอบคุณที่รับชม ❤️
+            </p>
+
+        </section>
+
+
+        <footer>
+            Made with love, just for you.
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         เพลง
+    ========================== -->
+
+    <audio id="music" loop>
+
+        <source
+            src="assets/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%20BOYdPOD%20Covered%20by%20No%20One%20Else.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
